@@ -3,7 +3,7 @@ from mock.api import mock_router
 from mock.models import MockModel
 from mock.util import dynamicroute
 
-api = NinjaAPI()
+api = NinjaAPI(csrf=True)
 
 
 api.add_router('mock/', mock_router)
