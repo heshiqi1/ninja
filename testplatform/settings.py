@@ -86,16 +86,17 @@ DATABASES = {
     }
 }
 
-# DATABASE = {
+# DATABASES = {
 #     'default': {
-#         'ENGINE': 'djongo',
-#         "CLIENT": {
-#            "name": 'sample_mflix',
-#            "host": 'mongodb+srv://hsq:Admin@123@cluster0.nerpzk0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
-#            "username": 'hsq',
-#            "password": 'Admin@123',
-#            "authMechanism": "SCRAM-SHA-1",
-#         }, 
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ninja-test',
+#         'USER': 'hsq1218',
+#         'PASSWORD': 'Admin@123',
+#         'HOST': 'hsq1218.mysql.pythonanywhere-services.com',  # 或者是数据库的主机名/IP地址
+#         'PORT': '3306',       # 或者是数据库的端口号
+#         'OPTIONS': {
+#             'charset': 'utf8mb4',
+#         },
 #     }
 # }
 
