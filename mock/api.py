@@ -5,7 +5,7 @@ from django.forms import model_to_dict
 from mock.serializers import MockSchema, ResponSchema
 
 
-mock_router = Router()
+mock_router = Router(tags=["mock"])
 
 
 @mock_router.get("/mock/mock2")
@@ -34,7 +34,7 @@ def get(request, name: str):
 
 
 # @mock_router.get("/mocks", response=List[MockSchema])
-@mock_router.get("/mocks", response={201: ResponSchema, 403: ResponSchema})
+@mock_router.get("/mocks", response={201: ResponSchema, 403: ResponSchema}, auth=None)
 def get_list(request):
     try:
         data = MockModel.objects.values()
@@ -60,4 +60,6 @@ def delete(request, id):
     data = get_object_or_404(MockModel, id=id)
     data.delete()
     return model_to_dict(data)
+
+
 
